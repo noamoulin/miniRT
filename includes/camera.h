@@ -1,0 +1,51 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   camera.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/24 17:19:10 by noa               #+#    #+#             */
+/*   Updated: 2023/06/26 19:23:18 by noa              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CAMERA_H
+# define CAMERA_H
+
+# include "vec3f.h"
+# include "scene.h"
+# include <math.h>
+# include <stdlib.h>
+# include <stdint.h>
+# include <stdbool.h>
+# include "render.h"
+
+typedef struct s_camera
+{
+	uint32_t	pixels_number;
+	uint32_t	horizontal_fov;
+	uint32_t	vertical_fov;
+	uint32_t	image_width;
+	uint32_t	image_height;
+	t_image		*image;
+	t_vec3f		*rays_dir;
+	t_vec3f		position;
+	t_vec3f		look_at;
+	t_vec3f		up;
+	t_vec3f		right;
+	t_scene		*t_scene;
+	double		image_ratio;
+	double		h;
+}	t_camera;
+
+bool	init_camera(t_camera *camera, const uint32_t width,
+			const uint32_t height, const uint32_t horizontal_fov);
+void	immerge_camera(t_camera *camera, const t_scene *scene,
+			const t_vec3f position, const t_vec3f orientation);
+void	set_camera_image(t_camera *camera, const t_image *image);
+void	update_rays_dir(t_camera *camera);
+void	take_image(t_camera *camera);
+void	translate_camera(t_camera *camera, const t_vec3f translation);
+
+#endif
