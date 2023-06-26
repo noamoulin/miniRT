@@ -6,7 +6,7 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 18:58:17 by noa               #+#    #+#             */
-/*   Updated: 2023/06/26 20:32:40 by noa              ###   ########.fr       */
+/*   Updated: 2023/06/26 20:37:49 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ bool	init_camera(t_camera *camera, const uint32_t width,
 	return (true);
 }
 
-void	set_camera_image(t_camera *camera, const t_image *image)
+void	set_camera_image(t_camera *camera, t_image *image)
 {
 	camera->image = image;
 }
@@ -69,7 +69,7 @@ void	update_rays_dirs(t_camera *camera)
 	}
 }
 
-void	immerge_camera(t_camera *camera, const t_scene *scene,
+void	immerge_camera(t_camera *camera, t_scene *scene,
 			const t_vec3f position, const t_vec3f orientation)
 {
 	camera->scene = scene;

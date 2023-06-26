@@ -6,11 +6,11 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 20:19:30 by noa               #+#    #+#             */
-/*   Updated: 2023/06/26 20:30:33 by noa              ###   ########.fr       */
+/*   Updated: 2023/06/27 00:09:31 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "space.h"
+#include "vec3f.h"
 
 t_vec3f	cross_product(const t_vec3f u, const t_vec3f v)
 {
@@ -26,4 +26,9 @@ t_vec3f	cross_product(const t_vec3f u, const t_vec3f v)
 		result.z = 0.0f;
 	}
 	return (result);
+}
+
+double	dot_product(const t_vec3f u, const t_vec3f v)
+{
+	return (u.x * v.x + u.y * v.y + u.z * v.z);
 }

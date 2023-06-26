@@ -6,11 +6,11 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 17:18:13 by noa               #+#    #+#             */
-/*   Updated: 2023/06/26 17:18:28 by noa              ###   ########.fr       */
+/*   Updated: 2023/06/26 20:41:55 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "space.h"
+#include "vec3f.h"
 
 t_vec3f	rotated_x(const t_vec3f u, const double alpha)
 {

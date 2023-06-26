@@ -6,11 +6,11 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 16:24:05 by noa               #+#    #+#             */
-/*   Updated: 2023/06/26 18:03:11 by noa              ###   ########.fr       */
+/*   Updated: 2023/06/26 20:41:09 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "space.h"
+#include "vec3f.h"
 
 t_vec3f	two_points_vec3f(const t_vec3f a, const t_vec3f b)
 {
